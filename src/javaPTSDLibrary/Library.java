@@ -7,10 +7,25 @@ import java.util.ArrayList;
  */
 public class Library {
 
-    public openingHour;
-    public closingHour;
+
+    public static final String OPENINGHOUR = "0800";  //assuming all libraries operate at this time
+    public static final String CLOSINGHOUR = "1900";  //assuming all libraries close at this time
+    private static int numOfLibraries = 0;
+    //======================================//
+
+    private int id = 0; //To discern between different libraries
     public String address;
     public ArrayList<Book> books;
+
+    public Library(String address){
+        this.id = ++numOfLibraries;
+        this.address = address;
+        this.books = new ArrayList<Book>();
+        System.out.format("Welcome to Library #%d, located at %s. We operate from %s to %s.",
+                this.id, this.address, OPENINGHOUR, CLOSINGHOUR);
+    }
+
+
 
 
 }
