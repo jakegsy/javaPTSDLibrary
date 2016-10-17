@@ -15,13 +15,12 @@ public class Book implements LibraryItem{
 
     public void borrow(Customer customer) throws ItemUnavailableException{
         if(this.state != State.RETURNED){
-            this.borrowedBy = customer;
-            this.state = State.BORROWED;
+            throw new ItemUnavailableException(this.state);
         }
     }
 
-    public void read(Customer customer){
-        if(this.state==State.RETURNED){
+    public void read(Customer customer) throws ItemUnavailableException{
+        if(this.state!=State.RETURNED){
 
         }
     }
