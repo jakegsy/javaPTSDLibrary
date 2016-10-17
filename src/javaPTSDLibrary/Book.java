@@ -3,11 +3,7 @@ package javaPTSDLibrary;
 /**
  * Created by jakegsy on 14/10/16.
  */
-public class Book {
-
-    private enum State{
-        BORROWED,READ,RETURNED
-    }
+public class Book implements LibraryItem{
 
     public String name;
     public String author;

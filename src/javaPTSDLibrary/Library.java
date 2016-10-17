@@ -7,7 +7,6 @@ import java.util.ArrayList;
  */
 public class Library {
 
-
     public static final String OPENINGHOUR = "0800";  //assuming all libraries operate at this time
     public static final String CLOSINGHOUR = "1900";  //assuming all libraries close at this time
     private static int numOfLibraries = 0;
