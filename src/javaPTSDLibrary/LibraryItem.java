@@ -7,6 +7,6 @@ public interface LibraryItem {
     enum State{
         BORROWED,READ,RETURNED
     }
-    void borrow(Customer customer);
-    void read(Customer customer);
+    void borrow(Customer customer) throws ItemUnavailableException;
+    void read(Customer customer) throws ItemUnavailableException;
 }
