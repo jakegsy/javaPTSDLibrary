@@ -6,5 +6,7 @@ public class Main {
 	// write your code here
         Library testLib = new Library("13 College Ave West");
         ItemUnavailableException testException = new ItemUnavailableException(LibraryItem.State.BORROWED);
+        Customer cust = new Customer("Jake", "12 College Ave West");
+        System.out.println(cust);
     }
 }

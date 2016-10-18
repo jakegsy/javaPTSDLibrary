@@ -20,7 +20,7 @@ public class Library {
         this.id = ++numOfLibraries;
         this.address = address;
         this.books = new ArrayList<Book>();
-        System.out.format("Welcome to Library #%d, located at %s. We operate from %s to %s.",
+        System.out.format("Welcome to Library #%d, located at %s. We operate from %s to %s.\n",
                 this.id, this.address, OPENINGHOUR, CLOSINGHOUR);
     }
 
