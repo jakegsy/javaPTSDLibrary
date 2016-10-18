@@ -1,5 +1,7 @@
 package javaPTSDLibrary;
 
+import javaPTSDLibrary.Books.Book;
+
 import java.util.ArrayList;
 
 /**
@@ -14,6 +16,7 @@ public class Library {
 
     private int id = 0; //To discern between different libraries
     public String address;
+    public ArrayList<LibraryItem> libraryitem;
     public ArrayList<Book> books;
 
     public Library(String address){
@@ -22,6 +25,10 @@ public class Library {
         this.books = new ArrayList<Book>();
         System.out.format("Welcome to Library #%d, located at %s. We operate from %s to %s.\n",
                 this.id, this.address, OPENINGHOUR, CLOSINGHOUR);
+    }
+
+    public void addBook(Book book){
+        this.books.add(book);
     }
 
 

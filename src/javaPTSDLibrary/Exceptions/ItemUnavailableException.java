@@ -1,4 +1,6 @@
-package javaPTSDLibrary;
+package javaPTSDLibrary.Exceptions;
+
+import javaPTSDLibrary.LibraryItem;
 
 /**
  * Created by jakegsy on 17/10/16.

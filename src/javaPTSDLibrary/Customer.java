@@ -1,4 +1,6 @@
 package javaPTSDLibrary;
+import javaPTSDLibrary.Exceptions.ItemUnavailableException;
+
 import java.util.HashSet;
 import java.util.ArrayList;
 /**
@@ -30,7 +32,7 @@ public class Customer {
         return (this.librariesAllowed.remove(_library));
     }
 
-    public boolean readItem(LibraryItem _item) throws ItemUnavailableException{
+    public boolean readItem(LibraryItem _item) throws ItemUnavailableException {
         try {
             _item.read(this);
             return true;
