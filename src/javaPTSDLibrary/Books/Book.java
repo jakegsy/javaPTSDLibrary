@@ -1,6 +1,6 @@
 package javaPTSDLibrary.Books;
 
-import javaPTSDLibrary.LibraryItem;
+import javaPTSDLibrary.LibraryTypes.LibraryItem;
 
 /**
  * Created by jakegsy on 14/10/16.

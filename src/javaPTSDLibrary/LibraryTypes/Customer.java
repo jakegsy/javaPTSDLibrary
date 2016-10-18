@@ -1,4 +1,4 @@
-package javaPTSDLibrary;
+package javaPTSDLibrary.LibraryTypes;
 import javaPTSDLibrary.Exceptions.ItemUnavailableException;
 
 import java.util.HashSet;

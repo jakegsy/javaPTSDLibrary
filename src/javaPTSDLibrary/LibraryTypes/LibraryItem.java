@@ -1,4 +1,4 @@
-package javaPTSDLibrary;
+package javaPTSDLibrary.LibraryTypes;
 
 import javaPTSDLibrary.Exceptions.ItemNotYoursException;
 import javaPTSDLibrary.Exceptions.ItemUnavailableException;
@@ -34,7 +34,7 @@ public abstract class LibraryItem {
     }
 
     public void borrow(Customer customer) throws ItemUnavailableException {
-        if(this.state != State.RETURNED) {
+        if(this.state!= State.RETURNED) {
             throw new ItemUnavailableException(this.state);
         } else {
             setCustomer(customer);

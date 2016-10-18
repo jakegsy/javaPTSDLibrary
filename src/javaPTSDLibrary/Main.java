@@ -2,6 +2,9 @@ package javaPTSDLibrary;
 
 import javaPTSDLibrary.Books.*;
 import javaPTSDLibrary.Exceptions.*;
+import javaPTSDLibrary.LibraryTypes.Customer;
+import javaPTSDLibrary.LibraryTypes.Library;
+import javaPTSDLibrary.LibraryTypes.LibraryItem;
 
 public class Main {
 
@@ -23,6 +26,8 @@ public class Main {
         } catch (ItemUnavailableException e) {
             e.printStackTrace();
         }
+
+
 
         try{
             hulky.borrow(cust1);
