@@ -27,8 +27,6 @@ public class Main {
             e.printStackTrace();
         }
 
-
-
         try{
             hulky.borrow(cust1);
             System.out.println("borrowed");
