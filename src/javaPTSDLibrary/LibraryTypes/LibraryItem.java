@@ -3,9 +3,7 @@ package javaPTSDLibrary.LibraryTypes;
 import javaPTSDLibrary.Exceptions.ItemNotYoursException;
 import javaPTSDLibrary.Exceptions.ItemUnavailableException;
 
-/**
- * Created by jakegsy on 17/10/16.
- */
+
 public abstract class LibraryItem {
     public enum State{
         BORROWED{
@@ -64,5 +62,12 @@ public abstract class LibraryItem {
         }
     }
 
+    public void printBorrowedBy(){ //For debugging and verification purposes.
+        if(this.borrowedBy != null){
+            System.out.println(this.borrowedBy);
+        } else {
+            System.out.println("Item is currently not borrowed.");
+        }
+    }
 
 }
