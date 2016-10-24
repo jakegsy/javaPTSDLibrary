@@ -10,6 +10,7 @@ public abstract class Book extends LibraryItem {
     public String name;
     public String author;
     public int numPages;
+    public String type;
 
     public Book(String _name, String _author, int _numPages){
         super();
