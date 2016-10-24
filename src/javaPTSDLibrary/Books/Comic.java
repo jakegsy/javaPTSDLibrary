@@ -7,9 +7,9 @@ import javaPTSDLibrary.Books.Book;
  */
 public class Comic extends Book {
 
-    public double price;
+    public int price;
 
-    public Comic(String _name, String _author, int _numPages, double _price){
+    public Comic(String _name, String _author, int _numPages, int _price){
         super(_name,_author,_numPages);
         this.price = _price;
     }

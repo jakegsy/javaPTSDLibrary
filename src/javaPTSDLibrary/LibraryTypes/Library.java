@@ -23,6 +23,7 @@ public class Library {
         this.id = ++numOfLibraries;
         this.address = address;
         this.books = new ArrayList<Book>();
+        this.libraryitem = new ArrayList<LibraryItem>();
         System.out.format("Welcome to Library #%d, located at %s. We operate from %s to %s.\n",
                 this.id, this.address, OPENINGHOUR, CLOSINGHOUR);
     }
@@ -31,6 +32,13 @@ public class Library {
         this.books.add(book);
     }
 
+    private int numItems(){
+        return libraryitem.size() + books.size();
+    }
+    @Override
+    public String toString(){
+        return this.id + ". Library at " + this.address + " with " + numItems() + " items.";
+    }
 
 
 
