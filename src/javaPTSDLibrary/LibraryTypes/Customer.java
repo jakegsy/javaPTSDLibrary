@@ -1,6 +1,6 @@
 package javaPTSDLibrary.LibraryTypes;
 import javaPTSDLibrary.Exceptions.ItemUnavailableException;
-
+import javaPTSDLibrary.Books.Book;
 import java.util.HashSet;
 import java.util.ArrayList;
 /**
@@ -49,6 +49,12 @@ public class Customer {
         } catch(ItemUnavailableException e){
             e.getMessage();
             return false;
+        }
+    }
+
+    private void booksBorrowed(){
+        for(LibraryItem item:itemsBorrowed){
+            
         }
     }
 
