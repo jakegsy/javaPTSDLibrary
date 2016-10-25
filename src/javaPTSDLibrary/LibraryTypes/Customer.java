@@ -1,6 +1,8 @@
 package javaPTSDLibrary.LibraryTypes;
 import javaPTSDLibrary.Exceptions.ItemUnavailableException;
 import javaPTSDLibrary.Books.*;
+
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.ArrayList;
 
@@ -11,14 +13,24 @@ public class Customer {
     private String address;
     private int cardNum;
     private ArrayList<LibraryItem> itemsBorrowed;
-    private HashSet<Library> librariesAllowed;
+    private ArrayList<Library> librariesAllowed;
 
     public Customer(String _name, String _address){
-        this.cardNum = numCustomer++; //starting from 0 as a design choice.
+        this.cardNum = ++numCustomer;
         this.name = _name;
         this.address = _address;
         this.itemsBorrowed = new ArrayList<LibraryItem>();
-        this.librariesAllowed = new HashSet<Library>();
+        this.librariesAllowed = new ArrayList<Library>();
+    }
+
+    public String getName(){
+        return this.name;
+    }
+    public String getAddress(){
+        return this.address;
+    }
+    public int getCardNum(){
+        return this.cardNum;
     }
 
     public boolean addLibrary(Library _library){
@@ -37,6 +49,9 @@ public class Customer {
             e.getMessage();
             return false;
         }
+    }
+    public ArrayList<Library> getLibraries(){
+        return this.librariesAllowed;
     }
 
     public boolean borrowItem(LibraryItem _item) throws ItemUnavailableException{

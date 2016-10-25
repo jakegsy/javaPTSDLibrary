@@ -39,12 +39,15 @@ public class Main {
 
                         case 4:
                             System.out.println("Add Customer to Library option selected");
+                            util.addCustomersToLibrary(customers,libraries,input);
                             break;
                         case 5:
                             util.printCustomers(customers);
                             break;
                         case 6:
                             util.printLibraries(libraries);
+                            break;
+                        case 7:
                             break;
 
                         case 42:
