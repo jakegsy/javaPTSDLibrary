@@ -4,13 +4,11 @@ import javaPTSDLibrary.Books.*;
 import javaPTSDLibrary.LibraryTypes.Customer;
 import javaPTSDLibrary.LibraryTypes.Library;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Scanner;
 
-/**
- * Created by jakegsy on 25/10/16.
- */
 public class util {
 
     public static void createLibrary(ArrayList<Library> libraries, Scanner input) {
@@ -180,10 +178,26 @@ public class util {
                 int libraryIndex = parseIntErrorWrap(input) - 1;
                 if(libraryIndex >=0 && libraryIndex < customer.getLibraries().size()){
                     Library library = libraries.get(libraryIndex);
+                    ArrayList<Book> booksFound = searchForBook(library.books,input);
+                    if(booksFound.size()==0){
+                        System.out.println("No books can be found.");
+                    }
 
                 }
             }
         }
+    }
+
+    private static ArrayList<Book> searchForBook(ArrayList<Book> books, Scanner input){
+        System.out.println("Enter book name: "); String bookName = input.nextLine();
+        System.out.println("Enter book author: "); String bookAuthor = input.nextLine();
+        ArrayList<Book> booksFound = new ArrayList<Book>();
+        for (Book book:books){
+            if(book.isBook(bookName,bookAuthor)){
+                booksFound.add(book);
+            }
+        }
+        return booksFound;
     }
 
     private static boolean isInputCorrect(String question, Scanner input){

@@ -31,6 +31,9 @@ public abstract class Book extends LibraryItem {
         return this.numPages;
     }
 
+    public boolean isBook(String _name, String _author){
+        return (_name.equals(this.name) && _author.equals(this.author));
+    }
 
 
 
