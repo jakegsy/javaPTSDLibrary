@@ -1,15 +1,12 @@
 package javaPTSDLibrary.LibraryTypes;
 import javaPTSDLibrary.Exceptions.ItemUnavailableException;
-import javaPTSDLibrary.Books.Book;
+import javaPTSDLibrary.Books.*;
 import java.util.HashSet;
 import java.util.ArrayList;
-/**
- * Created by jakegsy on 14/10/16.
- */
+
 public class Customer {
 
     private static int numCustomer = 0;
-
     private String name;
     private String address;
     private int cardNum;
@@ -52,15 +49,28 @@ public class Customer {
         }
     }
 
-    private void booksBorrowed(){
-        for(LibraryItem item:itemsBorrowed){
-            
+    public String booksBorrowed(){
+        String toReturn = "";
+        for (LibraryItem item:itemsBorrowed){
+            if (item instanceof Comic){
+                toReturn += ((Comic) item).toString();
+            }
+            if (item instanceof Textbook){
+                toReturn += ((Textbook) item).toString();
+            }
+            if (item instanceof SciFi){
+                toReturn += ((SciFi) item).toString();
+            }
         }
+        return toReturn;
     }
+
 
     @Override
     public String toString(){
-        return "Name: " + this.name + "\nAddress: " + this.address + "\nCard Number: " + this.cardNum;
+        return "Name: " + this.name + "\nAddress: "
+                + this.address + "\nCard Number: " + this.cardNum
+                + booksBorrowed();
     }
 
 }

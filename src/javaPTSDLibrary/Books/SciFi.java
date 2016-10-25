@@ -20,8 +20,9 @@ public class SciFi extends Book {
 
     @Override
     public String toString(){
-        return "Type: Comic\nName: " + super.getName() + "\nAuthor: " + super.getAuthor()
-                + "\nNumber of Pages: " + super.getNumPages() + "\nRating: " + prettyPrintRating();
+        return "Type: Comic |Name: " + super.getName() + " |Author: " + super.getAuthor()
+                + " |Number of Pages: " + super.getNumPages() + " |Rating: " + prettyPrintRating()
+                + "\n";
     }
 
     private String prettyPrintRating(){

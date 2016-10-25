@@ -20,7 +20,8 @@ public class Textbook extends Book {
     }
     @Override
     public String toString(){
-        return "Type: Textbook\nName: " + super.getName() + "\nAuthor: " + super.getAuthor()
-                + "\nNumber of Pages: " + super.getNumPages() + "\nModule: " + getModule();
+        return "Type: Textbook |Name: " + super.getName() + " |Author: " + super.getAuthor()
+                + " |Number of Pages: " + super.getNumPages() + " |Module: " + getModule() +
+                "\n";
     }
 }

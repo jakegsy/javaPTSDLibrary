@@ -20,7 +20,8 @@ public class Comic extends Book {
 
     @Override
     public String toString(){
-        return "Type: Comic\nName: " + super.getName() + "\nAuthor: " + super.getAuthor()
-                + "\nNumber of Pages: " + super.getNumPages() + "\nPrice: $" + getPrice();
+        return "Type: Comic |Name: " + super.getName() + " |Author: " + super.getAuthor()
+                + " |Number of Pages: " + super.getNumPages() + " |Price: $" + getPrice()
+                + "\n";
     }
 }
